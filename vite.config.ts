@@ -1,7 +1,9 @@
 import vueI18n from "@intlify/vite-plugin-vue-i18n";
+import presetWind from "@unocss/preset-wind";
 import vue from "@vitejs/plugin-vue";
 // eslint-disable-next-line import/order
 import * as path from "path";
+import { presetAttributify, presetUno } from "unocss";
 import unocss from "unocss/vite";
 import autoImport from "unplugin-auto-import/vite";
 import IconsResolver from "unplugin-icons/resolver";
@@ -20,7 +22,9 @@ export default defineConfig({
   mode: "development",
   plugins: [
     vue(),
-    unocss(),
+    unocss({
+      presets: [presetWind(), presetAttributify(), presetUno()],
+    }),
     components({
       extensions: [".vue"],
       dts: "src/auto-components.d.ts",
