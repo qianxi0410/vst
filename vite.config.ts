@@ -27,7 +27,8 @@ export default defineConfig({
     }),
     components({
       extensions: [".vue"],
-      dts: "src/auto-components.d.ts",
+      dts: "true",
+      dep: "true,
       resolvers: [IconsResolver()],
     }),
     autoImport({
