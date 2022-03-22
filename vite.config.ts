@@ -26,7 +26,7 @@ export default defineConfig({
       presets: [presetWind(), presetAttributify(), presetUno()],
     }),
     components({
-      dts: "src/components.d.ts",
+      dts: "src/auto-components.d.ts",
       resolvers: [IconsResolver()],
       dirs: ["src/components"],
     }),
