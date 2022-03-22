@@ -26,10 +26,9 @@ export default defineConfig({
       presets: [presetWind(), presetAttributify(), presetUno()],
     }),
     components({
-      extensions: [".vue"],
-      dts: "true",
-      dep: "true,
+      dts: "src/components.d.ts",
       resolvers: [IconsResolver()],
+      dirs: ["src/components"],
     }),
     autoImport({
       imports: ["vue", "@vueuse/core", "@vueuse/head", "pinia", "vue-router", "vue-i18n"],
