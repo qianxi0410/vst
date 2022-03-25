@@ -20,8 +20,7 @@ jobs:
     - uses: pnpm/action-setup@v2.1.0
       with:
         version: latest
-        run_install: |
-          - args: [--global, prettier, typescript]
+        run_install: true
 
     - name: check code quality and format
       run: pnpm run check
