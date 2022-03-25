@@ -21,7 +21,6 @@ jobs:
       with:
         version: latest
         run_install: |
-          - recursive: true
           - args: [--global, prettier, typescript]
 
     - name: check code quality and format
