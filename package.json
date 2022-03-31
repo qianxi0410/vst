@@ -6,6 +6,7 @@
     "check": "prettier --write '**/*.{ts,js,vue}' && eslint --fix '**/*.{ts,js,vue}'"
   },
   "dependencies": {
+    "@qianxi0410/prettier-config": "^1.0.0",
     "@vueuse/core": "^8.1.1",
     "@vueuse/head": "^0.7.5",
     "axios": "^0.26.1",

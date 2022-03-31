@@ -1,8 +1,1 @@
-{
-  "semi": true,
-  "endOfLine": "lf",
-  "tabWidth": 2,
-  "printWidth": 100,
-  "singleQuote": false,
-  "useTabs": false
-}
+"@qianxi0410/prettier-config"

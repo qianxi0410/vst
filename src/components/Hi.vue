@@ -20,7 +20,13 @@ const zh = () => {
     <Icon mr-1 icon="bi:github" :horizontal-flip="true" />
     <a href="https://github.com/qianxi0410" target="_blank">Github</a>
     <div mt-3>
-      <input id="lang-1" type="radio" name="lang" checked value="en" @click="en" />
+      <input
+        id="lang-1"
+        type="radio"
+        name="lang"
+        checked
+        value="en"
+        @click="en" />
       <label for="lang-1">en</label>
 
       <input id="lang-2" type="radio" name="lang" value="zh-CN" @click="zh" />
