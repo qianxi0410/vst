@@ -4,6 +4,7 @@ specifiers:
   '@intlify/vite-plugin-vue-i18n': ^3.3.1
   '@qianxi0410/eslint-config': ^2.0.1
   '@qianxi0410/prettier-config': ^1.0.0
+  '@quasar/extras': ^1.13.4
   '@quasar/vite-plugin': ^1.0.7
   '@types/node': ^17.0.21
   '@vitejs/plugin-vue': ^2.2.0
@@ -15,6 +16,7 @@ specifiers:
   pinia: ^2.0.12
   prettier: ^2.6.0
   quasar: ^2.6.2
+  sass: 1.32.0
   typescript: ^4.5.4
   unplugin-auto-import: ^0.6.6
   unplugin-vue-components: ^0.18.1
@@ -26,7 +28,7 @@ specifiers:
 
 dependencies:
   '@qianxi0410/prettier-config': 1.0.0
-  '@quasar/vite-plugin': 1.0.7_d995dc87ba3c2298ac6d2d311e2ca746
+  '@quasar/extras': 1.13.4
   '@vueuse/core': 8.1.1_vue@3.2.31
   axios: 0.26.1
   pinia: 2.0.12_typescript@4.6.2+vue@3.2.31
@@ -38,16 +40,18 @@ dependencies:
 devDependencies:
   '@intlify/vite-plugin-vue-i18n': 3.3.1_vite@2.8.6+vue-i18n@9.1.9
   '@qianxi0410/eslint-config': 2.0.1_eslint@8.11.0+typescript@4.6.2
+  '@quasar/vite-plugin': 1.0.7_d995dc87ba3c2298ac6d2d311e2ca746
   '@types/node': 17.0.21
   '@vitejs/plugin-vue': 2.2.4_vite@2.8.6+vue@3.2.31
   eslint: 8.11.0
   eslint-config-prettier: 8.5.0_eslint@8.11.0
   eslint-plugin-prettier: 4.0.0_68edcf5670f37721baf5d2cac6124e4d
   prettier: 2.6.0
+  sass: 1.32.0
   typescript: 4.6.2
   unplugin-auto-import: 0.6.6_@vueuse+core@8.1.1+vite@2.8.6
   unplugin-vue-components: 0.18.1_vite@2.8.6+vue@3.2.31
-  vite: 2.8.6
+  vite: 2.8.6_sass@1.32.0
   vue-tsc: 0.33.2_typescript@4.6.2
 
 packages:
@@ -402,7 +406,7 @@ packages:
       debug: 4.3.4
       fast-glob: 3.2.11
       source-map: 0.6.1
-      vite: 2.8.6
+      vite: 2.8.6_sass@1.32.0
       vue-i18n: 9.1.9_vue@3.2.31
     transitivePeerDependencies:
       - supports-color
@@ -533,6 +537,10 @@ packages:
     resolution: {integrity: sha512-qY5eQwjwfDMHXzOthI+krHHzm3d0r7EIxfO810O/EHDx/7wPhH0b8qLLJ79BcpwDhDOJJcEkE0oXhsNW4CKHbw==}
     dev: false
 
+  /@quasar/extras/1.13.4:
+    resolution: {integrity: sha512-cM1Vc2ju5p9hShssyTgy0jWLvit0diUTvH1mTcuzEo6omDB/8GzIbt7N4aer8m4tSTyfjP6/ejyu4N17mVoeMQ==}
+    dev: false
+
   /@quasar/vite-plugin/1.0.7_d995dc87ba3c2298ac6d2d311e2ca746:
     resolution: {integrity: sha512-cDKP2UH2O7fUloWXmlzJhBgyDlcEIvslhC0jTnZ1HE5dWFETjpBZ4ydB5ECFWbDRnZkKTrmqrmVquuy/bDLCVw==}
     engines: {node: '>=12'}
@@ -542,9 +550,9 @@ packages:
       vue: ^3.0.0
     dependencies:
       quasar: 2.6.2
-      vite: 2.8.6
+      vite: 2.8.6_sass@1.32.0
       vue: 3.2.31
-    dev: false
+    dev: true
 
   /@rollup/pluginutils/4.2.0:
     resolution: {integrity: sha512-2WUyJNRkyH5p487pGnn4tWAsxhEFKN/pT8CMgHshd5H+IXkOnKvKZwsz5ZWz+YCXkleZRAU5kwbfgF8CPfDRqA==}
@@ -703,7 +711,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.8.6
+      vite: 2.8.6_sass@1.32.0
       vue: 3.2.31
     dev: true
 
@@ -2768,6 +2776,14 @@ packages:
       regexp-tree: 0.1.24
     dev: true
 
+  /sass/1.32.0:
+    resolution: {integrity: sha512-fhyqEbMIycQA4blrz/C0pYhv2o4x2y6FYYAH0CshBw3DXh5D5wyERgxw0ptdau1orc/GhNrhF7DFN2etyOCEng==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+    dev: true
+
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
     hasBin: true
@@ -3059,7 +3075,7 @@ packages:
         optional: true
     dependencies:
       chokidar: 3.5.3
-      vite: 2.8.6
+      vite: 2.8.6_sass@1.32.0
       webpack-virtual-modules: 0.4.3
     dev: true
 
@@ -3085,7 +3101,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite/2.8.6:
+  /vite/2.8.6_sass@1.32.0:
     resolution: {integrity: sha512-e4H0QpludOVKkmOsRyqQ7LTcMUDF3mcgyNU4lmi0B5JUbe0ZxeBBl8VoZ8Y6Rfn9eFKYtdXNPcYK97ZwH+K2ug==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -3105,6 +3121,7 @@ packages:
       postcss: 8.4.12
       resolve: 1.22.0
       rollup: 2.70.1
+      sass: 1.32.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
