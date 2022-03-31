@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { Icon } from "@iconify/vue";
 const { t, locale } = useI18n();
 
 const en = () => {
@@ -17,7 +16,6 @@ const zh = () => {
   <div class="center link">
     <p>{{ t("first") }}</p>
     <p>{{ t("second") }}</p>
-    <Icon mr-1 icon="bi:github" :horizontal-flip="true" />
     <a href="https://github.com/qianxi0410" target="_blank">Github</a>
     <div mt-3>
       <input

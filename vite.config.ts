@@ -1,13 +1,9 @@
 import vueI18n from "@intlify/vite-plugin-vue-i18n";
-import presetWind from "@unocss/preset-wind";
+import { quasar } from "@quasar/vite-plugin";
 import vue from "@vitejs/plugin-vue";
 // eslint-disable-next-line import/order
 import * as path from "path";
-import { presetAttributify, presetUno } from "unocss";
-import unocss from "unocss/vite";
 import autoImport from "unplugin-auto-import/vite";
-import IconsResolver from "unplugin-icons/resolver";
-import icons from "unplugin-icons/vite";
 import components from "unplugin-vue-components/vite";
 import { defineConfig } from "vite";
 
@@ -22,12 +18,8 @@ export default defineConfig({
   mode: "development",
   plugins: [
     vue(),
-    unocss({
-      presets: [presetWind(), presetAttributify(), presetUno()],
-    }),
     components({
       dts: "src/auto-components.d.ts",
-      resolvers: [IconsResolver()],
       dirs: ["src/components"],
     }),
     autoImport({
@@ -38,6 +30,7 @@ export default defineConfig({
         "pinia",
         "vue-router",
         "vue-i18n",
+        "quasar",
       ],
       dts: "src/auto-imports.d.ts",
     }),
@@ -46,8 +39,6 @@ export default defineConfig({
       compositionOnly: true,
       include: [path.resolve(__dirname, "locales/**")],
     }),
-    icons({
-      autoInstall: true,
-    }),
+    quasar({}),
   ],
 });

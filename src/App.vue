@@ -1,7 +1,15 @@
 <script setup lang="ts">
-useHead({
-  title: `${import.meta.env.APP_TITLE}`,
-  meta: [{ name: "description", content: "Vue App Stater" }],
+useMeta({
+  title: "My App",
+  meta: {
+    equiv: {
+      "http-equiv": "Content-Type",
+      content: "text/html; charset=UTF-8",
+    },
+    noscript: {
+      default: "This is content for browsers with no JS (or disabled JS)",
+    },
+  },
 });
 </script>
 
