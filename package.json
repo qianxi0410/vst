@@ -21,7 +21,7 @@
     "@qianxi0410/eslint-config": "^2.0.1",
     "@types/node": "^17.0.21",
     "@types/nprogress": "^0.2.0",
-    "@unocss/preset-wind": "^0.30.2",
+    "@unocss/preset-wind": "^0.41.1",
     "@vitejs/plugin-vue": "^2.2.0",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
